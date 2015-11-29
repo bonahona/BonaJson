@@ -28,19 +28,19 @@ namespace BonaJson.Internal
     public class JObjectValue : JObject
     {
 
-        public override void Add(object element)
+        public override JObject Add(object element)
         {
             throw new InvalidOperationException();
         }
-        public override void Add(JObject element)
+        public override JObject Add(JObject element)
         {
             throw new InvalidOperationException();
         }
-        public override void Add(string name, object element)
+        public override JObject Add(string name, object element)
         {
             throw new InvalidOperationException();
         }
-        public override void Add(string name, JObject child)
+        public override JObject Add(string name, JObject child)
         {
             throw new InvalidOperationException();
         }

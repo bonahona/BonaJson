@@ -36,41 +36,43 @@ namespace BonaJson
             m_value = m_collection;
         }
 
-        public override void Add(object element)
+        public override JObject Add(object element)
         {
             if (element == null) {
-                Add(new JNullObject());
+                return Add(new JNullObject());
             } else if (element is bool) {
-                Add(new JBoolObject((bool)element)); 
+                return Add(new JBoolObject((bool)element)); 
             } else if (element is float) {
-                Add(new JValueObject((float)element));
+                return Add(new JValueObject((float)element));
             } else if (element is int) {
-                Add(new JIntObject((int)element));
+                return Add(new JIntObject((int)element));
             } else if (element is string) {
-                Add(new JStringObject((string)element));
+                return Add(new JStringObject((string)element));
             } else if (element is JObject) {
-                Add((JObject)element);
+                return Add((JObject)element);
             } else if (element is ISavable) {
                 ISavable tmpObject = (ISavable)element;
-                Add(tmpObject.Save());
+                return Add(tmpObject.Save());
             } else {
                 throw new InvalidCastException();
             }
         }
 
-        public override void Add(JObject element)
+        public override JObject Add(JObject element)
         {
             m_collection.Add(element);
+            return element;
         }
 
-        public override void Add(string name, object child)
+        public override JObject Add(string name, object child)
         {
-            Add(child);
+            return Add(child);
         }
 
-        public override void Add(string name, JObject child)
+        public override JObject Add(string name, JObject child)
         {
  	        m_collection.Add(child);
+            return child;
         }
 
         public override bool Remove(string name)

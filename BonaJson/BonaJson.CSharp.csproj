@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{83D000FA-4B4C-BCA4-ADA9-76AA3D11D90A}</ProjectGuid>
+    <ProjectGuid>{AB1F04E4-679D-1674-D766-7F1A9B1C9EA3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>GamePlugins:3</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.2.2f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -68,23 +68,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\Bona\BonaJson\BonaJsonException.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\ISavable.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\Internal\Deserializer.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\Internal\JObjectValue.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\Internal\JsonFormatException.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\Internal\Parser.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\Internal\PrettyPrintData.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\Internal\Reader.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\Internal\Serializer.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\JBoolObject.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\JIntObject.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\JNullObject.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\JObject.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\JObjectArray.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\JObjectCollection.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\JStringObject.cs" />
-    <Compile Include="Assets\Plugins\Bona\BonaJson\JValueObject.cs" />
+    <ProjectReference Include="BonaJson.CSharp.Plugins.csproj">
+      <Project>{83D000FA-4B4C-BCA4-ADA9-76AA3D11D90A}</Project>
+      <Name>BonaJson.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\BonaJsonExamples\ISavableExample.cs" />
+    <Compile Include="Assets\BonaJsonExamples\ReflectionData.cs" />
+    <Compile Include="Assets\BonaJsonExamples\ReflectionExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\Bona\BonaJson\Docs\license.txt" />

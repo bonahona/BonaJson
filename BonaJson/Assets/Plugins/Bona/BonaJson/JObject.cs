@@ -110,10 +110,10 @@ namespace BonaJson
             m_value = null;
         }
 
-        public abstract void Add(object element);
-        public abstract void Add(JObject element);
-        public abstract void Add(string name, JObject child);
-        public abstract void Add(string name, object element);
+        public abstract JObject Add(object element);
+        public abstract JObject Add(JObject element);
+        public abstract JObject Add(string name, JObject child);
+        public abstract JObject Add(string name, object element);
         public abstract bool Remove(JObject element);
         public abstract bool Remove(string name);
         public virtual IEnumerator<JObject> GetEnumerator()
