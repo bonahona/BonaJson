@@ -2,7 +2,8 @@
 using System.Collections;
 using System;
 
-// Most important this with this class: There is nothing inherited. No intergaces and no attributes attatched. It just works.
+// Note that this is not a Monobehavior. It is a seperate, pure data class created for the sole purpose of being serialized and deserialized.
+// Most important this with this class: There is nothing inherited. No interfaces and no attributes attatched. It just works.
 public class ReflectionData
 {
     // Field we want to serialize and deserialize into JSON.

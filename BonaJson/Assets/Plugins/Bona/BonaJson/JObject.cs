@@ -36,16 +36,11 @@ namespace BonaJson
 
             object result = parser.ParseObject();
 
-            if (result is JObjectCollection)
-            {
+            if (result is JObjectCollection){
                 return result as JObjectCollection;
-            }
-            else if (result is JObjectArray)
-            {
+            }else if (result is JObjectArray){
                 return result as JObjectArray;
-            }
-            else
-            {
+            }else{
                 throw new Internal.JsonFormatException("File does not start with Object or Array", 0, 0, "");
             }
         }
@@ -61,17 +56,12 @@ namespace BonaJson
 
         public object RawValue
         {
-            get
-            {
-                return m_value;
-            }
+            get { return m_value; }
         }
 
         public virtual T Value<T>()
         {
-
-            if (m_value is List<JObject> || m_value is Dictionary<String, JObject>)
-            {
+            if (m_value is List<JObject> || m_value is Dictionary<String, JObject>){
                 T result = Activator.CreateInstance<T>();
                 if (result is ISavable)
                 {
@@ -81,15 +71,12 @@ namespace BonaJson
                 }
 
                 return default(T);
-            }
-            else
-            {
+            }else{
                 var typeTest = default(T);
                 if (typeTest is float) {
                     return (T)m_value;
                 }
-
-                return (T)m_value;
+               return (T)m_value;
             }
         }
 

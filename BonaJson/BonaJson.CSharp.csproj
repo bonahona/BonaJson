@@ -74,7 +74,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BonaJsonExamples\ISavableExample.cs" />
+    <Compile Include="Assets\BonaJsonExamples\ISaveableExample.cs" />
     <Compile Include="Assets\BonaJsonExamples\ReflectionData.cs" />
     <Compile Include="Assets\BonaJsonExamples\ReflectionExample.cs" />
   </ItemGroup>

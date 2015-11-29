@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using BonaJson;
 
+// Monobehaviour to be used on the game objects. Delegates loading and saving to the ReflectionData class (Which is not a Monobehaviour).
 public class ReflectionExample : MonoBehaviour {
 
     // Fields where we will want to sertialize data to end up. 
