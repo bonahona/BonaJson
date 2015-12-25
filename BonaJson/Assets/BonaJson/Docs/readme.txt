@@ -21,7 +21,7 @@
  
  License
  -------
- This package is Open-source under the LGPL license, please read the LICENSE.txt for for information.
+ This package is Open-source under the MIT license, please read the LICENSE.txt for for information.
  Source is available from github on https://github.com/bonahona/BonaJson
  
  Author
